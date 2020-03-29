@@ -1,5 +1,6 @@
 {{>layout/header}}
 
+<br>
 <h2>To do App</h2>
 
 <div class="col-md-12">
@@ -7,11 +8,39 @@
         <div class="col-md-6">
             <input type="text"
                    id="title"
-                   placeholder="abc"
-                   class="form-control input-default w-50"  />
-            <a href="/hello" role="button" class="btn btn-secondary">hello</a>
-            <button type="button" class="btn btn-primary" id="btn-save">Add</button>
+                   placeholder="input your todo list"
+                   class="form-control input-default w-25"  />
+            <button type="button" class="btn btn-primary" id="btn-save">Add Todo</button>
         </div>
     </div>
+
+    <br>
+    <!-- 목록 영역 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>id</th>
+            <th>To do</th>
+            <th>생성일</th>
+            <th>수정일</th>
+            <th>삭제</th>
+        </tr>
+        </thead>
+
+        <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><input type="text" value="{{title}}"
+                    class="form-control input-default w-80" >
+                        <a data-id="{{id}}" role="button" class="btn btn-secondary">수정</a>
+                    </td>
+                    <td>{{crDate}}</td>
+                    <td>{{mdDate}}</td>
+                    <td><a data-id="{{id}}" role="button" class="btn btn-danger">X</a></td>
+                </tr>
+            {{/posts}}
+        </tbody>
+    </table>
 </div>
 {{>layout/footer}}

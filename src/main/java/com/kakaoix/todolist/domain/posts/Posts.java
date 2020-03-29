@@ -32,4 +32,8 @@ public class Posts extends BaseTimeEntity {
         this.content = content;
     }
 
+    public void delete(Long id){
+        this.id = id;
+    }
+
 }
