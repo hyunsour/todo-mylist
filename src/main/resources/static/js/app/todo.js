@@ -14,6 +14,8 @@ init : function(){
         console.log(id);
         _this.remove(id);
     });
+
+
 },
 save : function(){
     var data = {
