@@ -9,10 +9,12 @@ import lombok.NoArgsConstructor;
 public class PostsUpdateRequestDto {
     private String title;
     private String content;
+    private String isFin;
 
     @Builder
-    public PostsUpdateRequestDto(String title, String content){
+    public PostsUpdateRequestDto(String title, String content, String isFin){
         this.title = title;
         this.content = content;
+        this.isFin = isFin;
     }
 }

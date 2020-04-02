@@ -10,6 +10,7 @@ public class PostsResponseDto {
     private Long id;
     private String title;
     private String content;
+    private String isFin;
     private LocalDateTime crDate;
     private LocalDateTime mdDate;
 
@@ -17,6 +18,7 @@ public class PostsResponseDto {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.content = entity.getContent();
+        this.isFin = entity.getIsFin();
         this.crDate = entity.getCrDate();
         this.mdDate = entity.getMdDate();
     }

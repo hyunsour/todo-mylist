@@ -20,16 +20,20 @@ public class Posts extends BaseTimeEntity {
     private String title;
     @Column
     private String content;
+    @Column
+    private String isFin;
 
     @Builder
-    public Posts(String title, String content){
+    public Posts(String title, String content, String isFin){
         this.title = title;
         this.content = content;
+        this.isFin = isFin;
     }
 
-    public void update(String title, String content){
+    public void update(String title, String content, String isFin){
         this.title = title;
         this.content = content;
+        this.isFin = isFin;
     }
 
     public void delete(Long id){
